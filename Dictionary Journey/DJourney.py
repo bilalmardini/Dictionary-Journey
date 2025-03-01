@@ -14,3 +14,23 @@ for word in uniqueWords:
     counter = sentenceSplit.count(word)
     print(word+": "+str(counter)+" ") 
 
+
+companyEngineering = {
+    "engineering ":{
+        "alice":{"age":30, "role":"software engineer"},
+        "bob":{"age":28, "role":"devOps engineer"}
+    },
+    "HR":{
+        "charlie":{"age":35, "role":"HR manager"}
+    }
+}
+print(companyEngineering)
+companyEngineering["engineering "]["david"] = {"age":27,"role":"data science"} 
+
+def totalEmp (companyEngineer):
+    count = 0
+    for department in companyEngineer.values():
+        count += len(department)
+    return count
+
+print("the total number of employees is: "+str(totalEmp(companyEngineering)))
